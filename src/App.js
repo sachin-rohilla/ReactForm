@@ -1,16 +1,16 @@
 import Login from "./Components/Login";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Navbar from "./Components/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Dashboard from "./Components/Dashboard";
+import Register from "./Components/Register";
 
 function App() {
-  let isLogin=false
   return (
     <BrowserRouter>
-    <Navbar/>
       <Routes>
+        <Route path="/" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={isLogin?<Dashboard/>:<Navigate to="/login" replace/>}/>
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );
