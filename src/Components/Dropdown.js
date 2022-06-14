@@ -33,9 +33,10 @@ const Dropdown = () => {
       <Typography variant="h4" component="div" gutterBottom>
         {(data?.main?.temp - 273.15).toFixed(2)}°C
       </Typography>
+      
       <InputLabel>City</InputLabel>
-      <FormControl className="dropdown">
-        <Select onChange={handle}>
+      <FormControl className="dropdown" >
+        <Select onChange={handle} >
           <MenuItem value="Chennai">Chennai</MenuItem>
           <MenuItem value="Mumbai">Mumbai</MenuItem>
           <MenuItem value="Delhi">Delhi</MenuItem>
