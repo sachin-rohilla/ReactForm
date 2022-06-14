@@ -5,18 +5,16 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const loginHandler = () => {
     navigate("/login");
-    
   };
-  
+
   return (
     <>
-  <div>
-    <Dropdown/>
-  </div>
-  
+      <div>
+        <Dropdown />
+      </div>
+
       <h1>You are successfully login</h1>
       <button onClick={loginHandler}>Logout</button>
-    
     </>
   );
 };

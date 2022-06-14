@@ -1,6 +1,7 @@
 import TextField from "@mui/material/TextField";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 const Login = () => {
  
   const [name, setName] = useState("");
@@ -29,6 +30,7 @@ const Login = () => {
           name="Name"
           onChange={(e) => setName(e.target.value)}
         />
+        
         <TextField
           type="password"
           id="outlined-required"
@@ -36,7 +38,6 @@ const Login = () => {
           placeholder="Enter Your Password"
           onChange={(e) => setPassword(e.target.value)}
         />
-       
         <button className="form-input" type="submit" onClick={submitHandler}>
           Login
         </button>
